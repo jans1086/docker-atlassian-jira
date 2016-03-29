@@ -47,6 +47,9 @@ VOLUME ["/var/atlassian/jira", "/opt/atlassian/jira"]
 WORKDIR /var/atlassian/jira
 
 COPY "docker-entrypoint.sh" "/"
+
+COPY "atlassian-extras-3.1.2.jar" "/opt/atlassian/jira/atlassian-jira/WEB-INF/lib/"
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 # Run Atlassian JIRA as a foreground process by default.test
