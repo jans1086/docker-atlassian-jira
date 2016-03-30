@@ -50,6 +50,7 @@ WORKDIR /var/atlassian/jira
 COPY "docker-entrypoint.sh" "/"
 
 COPY "atlassian-extras-3.1.2.jar" "/opt/atlassian/jira/atlassian-jira/WEB-INF/lib/"
+COPY "JIRA-language-pack-zh_CN.jar" "/opt/atlassian/jira/atlassian-jira/WEB-INF/lib/"
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
